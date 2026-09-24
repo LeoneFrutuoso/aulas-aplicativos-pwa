@@ -1,7 +1,24 @@
-function BotaoCustomizado() {
-return null;
+import "./BotaoCustomizado.css";
 
+function BotaoCustomizado(props) {
+  const classes = ["BotaoCustomizado_root"];
 
+  switch (props.tipo) {
+    case "primario":
+      classes.push("BotaoCustomizado_primario");
+      break;
+    case "secundario":
+      classes.push("BotaoCustomizado_secundario");
+      break;
+    default:
+      break;
+  }
+
+  return (
+    <button className={classes.join(" ")}>
+      {props.children}
+    </button>
+  );
 }
 
-export default BotaoCustomizado
+export default BotaoCustomizado;

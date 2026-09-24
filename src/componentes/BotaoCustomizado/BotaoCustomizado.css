@@ -1,0 +1,15 @@
+.BotaoCustomizado_root{
+    padding: 8px 16px;
+    border: none;
+
+}
+
+.BotaoCustomizado_root:hover{
+opacity: 09;
+
+}
+.BotaoCustomizado_primario{
+background-color: var--(cor-primaria);
+
+
+}
