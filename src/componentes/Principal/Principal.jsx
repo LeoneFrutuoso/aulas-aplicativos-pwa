@@ -1,12 +1,9 @@
 import "./Principal.css";
-import BotaoCustomizado from "../BotaoCustomizado/BotaoCustomizado";
 
-function Principal(Props) {
-    
-  return (
-    <main className="Principal_root">
-     {Props.childen}</main>
-  );
+function Principal(props) {
+  return <main className="Principal_root">
+    <h2>{ props.titulo}</h2>
+    {props.children}</main>;
 }
 
-export default Principal
+export default Principal;

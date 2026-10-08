@@ -11,10 +11,16 @@ function PaginaInicial() {
       >
         Salvar
       </BotaoCustomizado>
-      <BotaoCustomizado tipo="secundario">Cancelar</BotaoCustomizado>
-      <BotaoCustomizado>Enviar</BotaoCustomizado>
+      <BotaoCustomizado
+        tipo="secundario"
+        aoClicar={() => alert("Cancelar clicado!")}
+      >
+        Cancelar
+      </BotaoCustomizado>
+      <BotaoCustomizado aoClicar={() => alert("Enviar clicado!")}>
+        Enviar
+      </BotaoCustomizado>
     </Principal>
   );
 }
-
 export default PaginaInicial;
