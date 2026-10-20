@@ -8,7 +8,12 @@ function PaginaListaTarefas() {
 const [tarefas,settarefas] = useState ([])
   
   
-  const adicionarTarefa = () => {};
+  const adicionarTarefa = () => {
+tarefas.push(descricaoTarefa)
+settarefas([...tarefas]);
+
+
+  };
 
   return (
     <Principal titulo="Lista de Tarefas" voltarPara="/">
@@ -25,6 +30,12 @@ const [tarefas,settarefas] = useState ([])
       <BotaoCustomizado tipo="primario" aoClicar={adicionarTarefa}>
         Adicionar Tarefa
       </BotaoCustomizado>
+
+{ tarefas.map((item) => {
+return <li> {item}</li>
+})}
+
+
     </Principal>
   );
 }
